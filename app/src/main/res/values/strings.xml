@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mantra</string>
+
+    //MainActivity
+    <string name="main_activity_title">Take your journey</string>
+    <string name="main_activity_text">Finding you special please to help you relax and grow is something that should be done 5-10 minutes every day. Open your mind and start your journey!</string>
+    <string name="main_activity_button_text">Press to let your journey begin</string>
+    <string name="main_activity_side_icon_text">FOR EVERYDAY USAGE</string>
+
+
+    //FirstActivity
+    <string name="first_activity_title">Mantra</string>
+    <string name="first_activity_text">Focus on breathing in an out. Breath in from the mouth and out of your nose. Try t relax and keep your mind clear. Do this for 3-5 minutes. </string>
+
+    //SecondActivity
+    <string name="second_activity_title">Silence</string>
+    <string name="second_activity_text">Turn off every electronic device and surrond yourself with the silence and listen to your inner self.</string>
+
+    //ThirdActivity
+    <string name="third_activity_title">Go walking</string>
+    <string name="third_activity_text">Take you headphones and head out to the nature for a relaxing walk.</string>
+
+    //FourthActivity
+    <string name="fourth_activity_title">Yoga</string>
+    <string name="fourth_activity_text">Now I want you to do five yoga exercises. Take the time you need and do not forget to breath slowly.</string>
+
+    //FifthActivity
+    <string name="fifth_activity_title">Tea time</string>
+    <string name="fifth_activity_text">We all now that a cup of tea is both good for your body and mental state. Now I want you to go make a cup of tea with and enjoy a relaxing time with either a book or in front of the tv.</string>
+
+
+
+</resources>
