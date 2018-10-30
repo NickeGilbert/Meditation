@@ -63,9 +63,12 @@ public class SeventhActivity extends AppCompatActivity {
                         case 6:
                             activity = activityList.get(5);
                             break;
+                        case 7:
+                            activity = activityList.get(6);
+                            break;
                         default:
                             // We will open the fifth remaining activity of the list
-                            activity = activityList.get(6);
+                            activity = activityList.get(7);
                             //        activityList.remove(4);
                             break;
                     }

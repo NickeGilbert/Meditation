@@ -9,7 +9,7 @@
 
 
     //FirstActivity
-    <string name="first_activity_title">Mantra</string>
+    <string name="first_activity_title">Meditate</string>
     <string name="first_activity_text">Focus on breathing in an out. Breath in from the mouth and out of your nose. Try t relax and keep your mind clear. Do this for 3-5 minutes. </string>
 
     //SecondActivity
@@ -28,6 +28,17 @@
     <string name="fifth_activity_title">Tea time</string>
     <string name="fifth_activity_text">We all now that a cup of tea is both good for your body and mental state. Now I want you to go make a cup of tea with and enjoy a relaxing time with either a book or in front of the tv.</string>
 
+    //SixthActivity
+    <string name="sixth_activity_title">Taking notes</string>
+    <string name="sixth_activity_text">Focus on what makes you happy and write down three of those things. Place the note in your pocket and be sure to always bring it with you.</string>
+
+    //SeventhActivity
+    <string name="seventh_activity_title">Thank somebody</string>
+    <string name="seventh_activity_text">Who makes you happy? Who brings you the most joy? Why not say "thank you" to that person?</string>
+
+    //EightActivity
+    <string name="eight_activity_title">Read a book</string>
+    <string name="eight_activity_text">Pick up your favorite book and lose yourself in its fantasy world!</string>
 
 
 </resources>

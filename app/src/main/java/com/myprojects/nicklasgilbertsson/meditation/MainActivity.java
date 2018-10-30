@@ -29,9 +29,10 @@ public class MainActivity extends AppCompatActivity {
                 activityList.add(FifthActivity.class);
                 activityList.add(SixthActivity.class);
                 activityList.add(SeventhActivity.class);
+                activityList.add(EightActivity.class);
 
                 Random generator = new Random();
-                int number = generator.nextInt(7) + 1;
+                int number = generator.nextInt(8) + 1;
 
                 Class activity = null;
 
@@ -60,8 +61,11 @@ public class MainActivity extends AppCompatActivity {
                     case 6:
                         activity = SixthActivity.class;
                         break;
-                    default:
+                    case 7:
                         activity = SeventhActivity.class;
+                        break;
+                    default:
+                        activity = EightActivity.class;
                       //  activityList.remove(FifthActivity.class);
                         break;
                 }

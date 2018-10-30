@@ -9,13 +9,13 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class FourthActivity extends AppCompatActivity {
+public class EightActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourth);
-        Button myButton = (Button) findViewById(R.id.button4);
+        setContentView(R.layout.activity_eight);
+        Button myButton = (Button) findViewById(R.id.button5);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,22 +40,22 @@ public class FourthActivity extends AppCompatActivity {
                             // We will open the first remaining activity of the list
                             activity = activityList.get(0);
                             // We will now remove that activity from the list
-                       //     activityList.remove(0);
+                            //      activityList.remove(0);
                             break;
                         case 2:
                             // We will open the second remaining activity of the list
                             activity = activityList.get(1);
-                       //     activityList.remove(1);
+                            //   activityList.remove(1);
                             break;
                         case 3:
                             // We will open the third remaining activity of the list
                             activity = activityList.get(2);
-                        //    activityList.remove(2);
+                            //    activityList.remove(2);
                             break;
                         case 4:
                             // We will open the fourth remaining activity of the list
                             activity = activityList.get(3);
-                        //    activityList.remove(3);
+                            //   activityList.remove(3);
                             break;
                         case 5:
                             activity = activityList.get(4);

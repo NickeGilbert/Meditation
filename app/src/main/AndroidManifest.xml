@@ -18,21 +18,26 @@
         </activity>
         <activity
             android:name=".FourthActivity"
-            android:label="Yoga"/>
+            android:label="Yoga" />
         <activity
             android:name=".FifthActivity"
             android:label="Tea Time" />
         <activity
             android:name=".FirstActivity"
-            android:label="Mantra" />
+            android:label="Meditate" />
         <activity
             android:name=".SecondActivity"
             android:label="Silence" />
         <activity
             android:name=".ThirdActivity"
             android:label="Go Walking" />
-        <activity android:name=".SixthActivity" />
-        <activity android:name=".SeventhActivity"></activity>
+        <activity
+            android:name=".SixthActivity"
+            android:label="Notes" />
+        <activity
+            android:name=".SeventhActivity"
+            android:label="Thank somebody" />
+        <activity android:name=".EightActivity" android:label="Read a book"></activity>
     </application>
 
 </manifest>
