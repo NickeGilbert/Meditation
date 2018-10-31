@@ -10,12 +10,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class EightActivity extends AppCompatActivity {
+public class NineActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eight);
+        setContentView(R.layout.activity_nine);
         final Button myButton = (Button) findViewById(R.id.button5);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,15 +27,13 @@ public class EightActivity extends AppCompatActivity {
                 if(activityList.size() == 0) {
                     // Do something when after all activities have been opened
                     //     doSomeAction();
-
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(EightActivity.this, MainActivity.class);
-                        EightActivity.this.startActivity(intent);
+                        Intent intent = new Intent(NineActivity.this, MainActivity.class);
+                        NineActivity.this.startActivity(intent);
                     }
                     });
-
                     Toast.makeText(getApplicationContext(), "Finished! Tap again to restart", Toast.LENGTH_LONG).show();
                 } else {
                     // Now, the random number is generated between 1 and however many

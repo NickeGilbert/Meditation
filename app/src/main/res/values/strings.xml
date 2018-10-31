@@ -2,10 +2,11 @@
     <string name="app_name">Mantra</string>
 
     //MainActivity
-    <string name="main_activity_title">Take your journey</string>
-    <string name="main_activity_text">Finding you special please to help you relax and grow is something that should be done 5-10 minutes every day. Open your mind and start your journey!</string>
+    <string name="main_activity_title">Start your journey</string>
+    <string name="main_activity_text">Finding your inner peace is something that should be done 5-10 minutes every day. It will help you grow and relieve you from stress. Now open your mind, clear your head and lets go!</string>
     <string name="main_activity_button_text">Press to let your journey begin</string>
-    <string name="main_activity_side_icon_text">FOR EVERYDAY USAGE</string>
+    <string name="main_activity_first_side_icon_text">FIND YOUR INNER PEACE</string>
+    <string name="main_activity_second_side_icon_text">CLEAR YOUR HEAD</string>
 
 
     //FirstActivity
@@ -34,11 +35,35 @@
 
     //SeventhActivity
     <string name="seventh_activity_title">Thank somebody</string>
-    <string name="seventh_activity_text">Who makes you happy? Who brings you the most joy? Why not say "thank you" to that person?</string>
+    <string name="seventh_activity_text">Who makes you happy? Who brings you the most joy? Why not say thank you to that person?</string>
 
     //EightActivity
     <string name="eight_activity_title">Read a book</string>
     <string name="eight_activity_text">Pick up your favorite book and lose yourself in its fantasy world!</string>
+
+    //NineActivity
+    <string name="nine_activity_title">Write</string>
+    <string name="nine_activity_text">Writing is one way to handle stress and is  both stimulating for your brain and may help you relieve stress and anxiety!</string>
+
+    //TenthActivity
+    <string name="tenth_activity_title">Play</string>
+    <string name="tenth_activity_text">Play is a wonderful way to unwind! Play is anything that is purposeless and pleasurable. Go out to throw a Frisbee or go to the zoo, anything that is fun for you. </string>
+
+    //EleventhActivity
+    <string name="eleventh_activity_title">Be in nature</string>
+    <string name="eleventh_activity_text">Head outside and “sit on a bench or a blanket and let your mind get quiet” while you engage all your senses. Engaging your senses is a powerful way to relax. What do you see, hear and smell?</string>
+
+    //TwelfthActivity
+    <string name="twelfth_activity_title">Set goals</string>
+    <string name="twelfth_activity_text">Setting yourself goals and challenges, whether at work or outside, such as learning a new language or training, can help you switch off from the high pressures in life and build your confidence.</string>
+
+    //ThirteenActivity
+    <string name="thirteen_activity_title">Exercise</string>
+    <string name="thirteen_activity_text">Exercise is one of the most important things you can do to combat stress.People who exercise regularly are less likely to experience anxiety than those who dont exercise.</string>
+
+    //FourteenActivity
+    <string name="fourteen_activity_title">Have company</string>
+    <string name="fourteen_activity_text">Solitude and silence can be the ultimate way to relax. For others, there is nothing more diverting than enjoying the company of your loved ones. Whether they provide a distraction or they help you.</string>
 
 
 </resources>

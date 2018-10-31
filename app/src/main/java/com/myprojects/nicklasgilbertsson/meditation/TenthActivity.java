@@ -10,12 +10,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class EightActivity extends AppCompatActivity {
+public class TenthActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eight);
+        setContentView(R.layout.activity_tenth);
         final Button myButton = (Button) findViewById(R.id.button5);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,8 +31,8 @@ public class EightActivity extends AppCompatActivity {
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(EightActivity.this, MainActivity.class);
-                        EightActivity.this.startActivity(intent);
+                        Intent intent = new Intent(TenthActivity.this, MainActivity.class);
+                        TenthActivity.this.startActivity(intent);
                     }
                     });
 

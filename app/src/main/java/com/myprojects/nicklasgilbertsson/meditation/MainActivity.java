@@ -30,9 +30,15 @@ public class MainActivity extends AppCompatActivity {
                 activityList.add(SixthActivity.class);
                 activityList.add(SeventhActivity.class);
                 activityList.add(EightActivity.class);
+                activityList.add(NineActivity.class);
+                activityList.add(TenthActivity.class);
+                activityList.add(EleventhActivity.class);
+                activityList.add(TwelfthActivity.class);
+                activityList.add(ThirteenActivity.class);
+                activityList.add(FourteenActivity.class);
 
                 Random generator = new Random();
-                int number = generator.nextInt(8) + 1;
+                int number = generator.nextInt(14) + 1;
 
                 Class activity = null;
 
@@ -41,32 +47,58 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         activity = FirstActivity.class;
                         // We are adding the number of the activity to the list
-                  //      activityList.remove(FirstActivity.class);
+                        activityList.remove(FirstActivity.class);
                         break;
                     case 2:
                         activity = SecondActivity.class;
-                   //     activityList.remove(SecondActivity.class);
+                        activityList.remove(SecondActivity.class);
                         break;
                     case 3:
                         activity = ThirdActivity.class;
-                    //    activityList.remove(ThirdActivity.class);
+                        activityList.remove(ThirdActivity.class);
                         break;
                     case 4:
                         activity = FourthActivity.class;
-                    //    activityList.remove(FourthActivity.class);
+                        activityList.remove(FourthActivity.class);
                         break;
                     case 5:
                         activity = FifthActivity.class;
+                        activityList.remove(FifthActivity.class);
                         break;
                     case 6:
                         activity = SixthActivity.class;
+                        activityList.remove(SixthActivity.class);
                         break;
                     case 7:
                         activity = SeventhActivity.class;
+                        activityList.remove(SeventhActivity.class);
                         break;
-                    default:
+                    case 8:
                         activity = EightActivity.class;
-                      //  activityList.remove(FifthActivity.class);
+                        activityList.remove(EightActivity.class);
+                        break;
+                    case 9:
+                        activity = NineActivity.class;
+                        activityList.remove(NineActivity.class);
+                        break;
+                    case 10:
+                        activity = TenthActivity.class;
+                        activityList.remove(TenthActivity.class);
+                        break;
+                    case 11:
+                        activity = EleventhActivity.class;
+                        activityList.remove(EleventhActivity.class);
+                        break;
+                    case 12:
+                        activity = TwelfthActivity.class;
+                        activityList.remove(TwelfthActivity.class);
+                        break;
+                    case 13:
+                        activity = ThirteenActivity.class;
+                        activityList.remove(ThirteenActivity.class);
+                    default:
+                        activity = FourteenActivity.class;
+                        activityList.remove(FourteenActivity.class);
                         break;
                 }
                 // We use intents to start activities
