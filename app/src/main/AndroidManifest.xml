@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.myprojects.nicklasgilbertsson.meditation">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,35 +15,76 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.FourthActivity"
+            android:label="Yoga"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.FifthActivity"
+            android:label="Tea Time"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.FirstActivity"
+            android:label="Meditate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.SecondActivity"
+            android:label="Silence"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.ThirdActivity"
+            android:label="Go Walking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.SixthActivity"
+            android:label="Notes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.SeventhActivity"
+            android:label="Thank somebody"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.EightActivity"
+            android:label="Read a book"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.NineActivity"
+            android:label="Write"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.TenthActivity"
+            android:label="Play"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.EleventhActivity"
+            android:label="Nature"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.TwelfthActivity"
+            android:label="Goals"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.ThirteenActivity"
+            android:label="Exercise"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MantraExercisesActivity.FourteenActivity"
+            android:label="Friends"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AccountActivity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FourthActivity"
-            android:label="Yoga" />
-        <activity
-            android:name=".FifthActivity"
-            android:label="Tea Time" />
-        <activity
-            android:name=".FirstActivity"
-            android:label="Meditate" />
-        <activity
-            android:name=".SecondActivity"
-            android:label="Silence" />
-        <activity
-            android:name=".ThirdActivity"
-            android:label="Go Walking" />
-        <activity
-            android:name=".SixthActivity"
-            android:label="Notes" />
-        <activity
-            android:name=".SeventhActivity"
-            android:label="Thank somebody" />
-        <activity android:name=".EightActivity" android:label="Read a book"></activity>
+        <activity android:name=".AccountActivity.SignupActivity" />
+        <activity android:name=".AccountActivity.ResetPasswordActivity" />
+        <activity android:name=".BottomNavigationActivity" />
+        <activity android:name=".SoundActivity" android:label="Your sounds"></activity>
     </application>
 
 </manifest>

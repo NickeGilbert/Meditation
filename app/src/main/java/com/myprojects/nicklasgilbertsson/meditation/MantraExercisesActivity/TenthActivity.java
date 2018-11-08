@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation;
+package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,16 +7,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
+import com.myprojects.nicklasgilbertsson.meditation.R;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class SeventhActivity extends AppCompatActivity {
+public class TenthActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seventh);
-        final Button myButton = (Button) findViewById(R.id.button3);
+        setContentView(R.layout.activity_tenth);
+        final Button myButton = (Button) findViewById(R.id.button5);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,10 +35,11 @@ public class SeventhActivity extends AppCompatActivity {
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(SeventhActivity.this, MainActivity.class);
-                        SeventhActivity.this.startActivity(intent);
+                        Intent intent = new Intent(TenthActivity.this, BottomNavigationActivity.class);
+                        TenthActivity.this.startActivity(intent);
                     }
                     });
+
                     Toast.makeText(getApplicationContext(), "Finished! Tap again to restart", Toast.LENGTH_LONG).show();
                 } else {
                     // Now, the random number is generated between 1 and however many

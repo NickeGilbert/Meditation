@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation;
+package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,16 +7,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
+import com.myprojects.nicklasgilbertsson.meditation.R;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class FourteenActivity extends AppCompatActivity {
+public class FourthActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourteen);
-        final Button myButton = (Button) findViewById(R.id.button5);
+        setContentView(R.layout.activity_fourth);
+        final Button myButton = (Button) findViewById(R.id.button4);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,15 +31,13 @@ public class FourteenActivity extends AppCompatActivity {
                 if(activityList.size() == 0) {
                     // Do something when after all activities have been opened
                     //     doSomeAction();
-
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(FourteenActivity.this, MainActivity.class);
-                        FourteenActivity.this.startActivity(intent);
+                        Intent intent = new Intent(FourthActivity.this, BottomNavigationActivity.class);
+                        FourthActivity.this.startActivity(intent);
                     }
                     });
-
                     Toast.makeText(getApplicationContext(), "Finished! Tap again to restart", Toast.LENGTH_LONG).show();
                 } else {
                     // Now, the random number is generated between 1 and however many

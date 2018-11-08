@@ -6,6 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.EightActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.EleventhActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.FifthActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.FirstActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.FourteenActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.FourthActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.NineActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.SecondActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.SeventhActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.SixthActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.TenthActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.ThirdActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.ThirteenActivity;
+import com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity.TwelfthActivity;
+
 import java.util.ArrayList;
 import java.util.Random;
 

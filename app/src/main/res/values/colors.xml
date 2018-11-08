@@ -6,4 +6,5 @@
 
     <color name="button_color">#E6E6FC</color>
     <color name="white_text_color">#fff</color>
+    <color name="subscription_button">#5B6173</color>
 </resources>

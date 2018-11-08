@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FifthActivity">
+    tools:context=".MantraExercisesActivity.FifthActivity">
 
     <Button
         android:id="@+id/button5"
@@ -37,7 +37,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="291dp"
+        android:layout_width="327dp"
         android:layout_height="96dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -54,15 +54,15 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="197dp"
-        android:layout_height="143dp"
+        android:layout_width="254dp"
+        android:layout_height="165dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/coffee_cup"
+        android:background="@drawable/tea"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

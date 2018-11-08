@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "83600565857",
+    "firebase_url": "https://ibeacon-b9caa.firebaseio.com",
+    "project_id": "ibeacon-b9caa",
+    "storage_bucket": "ibeacon-b9caa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83600565857:android:25bcdaac748f320e",
+        "android_client_info": {
+          "package_name": "com.myprojects.nicklasgilbertsson.meditation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83600565857-sbpliepmb77q8uel95f8r0c5uul5kmo4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myprojects.nicklasgilbertsson.meditation",
+            "certificate_hash": "45bf8dbc3973c8bdfe6a23fbe7f099a69cf4b873"
+          }
+        },
+        {
+          "client_id": "83600565857-vfeftotqsn84gt1dh66s4sgsn27hd0jo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4qfSJgBV7mEo3v1bCbQ6j-or18HFctrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83600565857-vfeftotqsn84gt1dh66s4sgsn27hd0jo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "83600565857-h37uocvfd0lrj9p0kftfb9lkv40ehad5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nicklasgilbertsson.ibeacons"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
