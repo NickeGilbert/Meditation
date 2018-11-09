@@ -13,6 +13,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -21,8 +22,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +36,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.myprojects.nicklasgilbertsson.meditation.AccountActivity.LoginActivity;
 import com.myprojects.nicklasgilbertsson.meditation.AccountActivity.SignupActivity;
 import com.myprojects.nicklasgilbertsson.meditation.AccountActivity.User;
+
+import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
 
@@ -48,17 +54,19 @@ public class ProfileActivity extends Fragment {
     private ProgressBar progressBar;
     private FirebaseAuth auth;
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         view = inflater.inflate(R.layout.activity_profile, container, false);
         auth = FirebaseAuth.getInstance();
         email = (TextView) view.findViewById(R.id.useremail);
 
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = mDatabase.getKey();
         setDataToView(user);
-
-        Log.d(TAG, "COOL: " + user);
+       // removeUser();
+        Log.d(TAG, "USEREMAIL: EMAIL " + user.getEmail() + " KEY" + userId);
 
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -97,7 +105,6 @@ public class ProfileActivity extends Fragment {
                 newPassword.setVisibility(View.VISIBLE);
                 changePassword.setVisibility(View.VISIBLE);
                 remove.setVisibility(View.GONE);
-                removeUser();
             }
         });
 
@@ -140,6 +147,24 @@ public class ProfileActivity extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
+
+                                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                                Query usersQuery = ref.child("users").orderByChild("email").equalTo(user.getEmail());
+
+                                usersQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        for (DataSnapshot usersQuery: dataSnapshot.getChildren()) {
+                                            usersQuery.getRef().removeValue();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+                                        Log.e(TAG, "onCancelled", databaseError.toException());
+                                    }
+                                });
+
                                 Toast.makeText(getActivity(), "Your profile is deleted: (Create an accound now!)", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getActivity(), SignupActivity.class));
                                 getActivity().finish();
@@ -165,20 +190,12 @@ public class ProfileActivity extends Fragment {
 
     private void removeUser() {
 
-        // String username = user.getEmail();
-      //  Log.d(TAG, "removeUser: " + username);
-           // DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users").child("email");
 
-       //     mDatabase.removeValue();
 
-       // DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
 
-       // String key = mDatabase.child("users").push().getKey();
+        //DatabaseReference userPath = FirebaseDatabase.getInstance().getReference("users").child(id);
+       // userPath.removeValue();
 
-         //   Log.d(TAG, "removeUser: " + key);
-
-        //mDatabase.child(userId);
-      //  mDatabase.removeValue();
     }
 
     @SuppressLint("SetTextI18n")

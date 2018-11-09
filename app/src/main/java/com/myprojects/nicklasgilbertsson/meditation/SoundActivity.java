@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -16,7 +17,6 @@ public class SoundActivity extends AppCompatActivity {
     private RecyclerView mSoundList;
     private DatabaseReference mDatabase;
 
-    // Hur jag får firebase data i cardview https://www.youtube.com/watch?v=dth3aq_QPzU
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,7 @@ public class SoundActivity extends AppCompatActivity {
             @Override
             protected void populateViewHolder(SoundViewHolder viewHolder, Sounds model, int position) {
                 viewHolder.setTitle(model.getTitle());
+               // viewHolder.setSong(model.getSong()); Ska säkerligen läggas in här sen!
             }
         };
 
@@ -59,6 +60,15 @@ public class SoundActivity extends AppCompatActivity {
             TextView sound_title = (TextView) mView.findViewById(R.id.sound_title);
             sound_title.setText(title);
         }
+
+
+        /* Denna är med all sannolikhet inte rätt än!
+        public void setSong(String song)
+        {
+            Button play_music = (Button) mView.findViewById(R.id.play_music_button);
+            play_music.setText(song);
+        }
+        */
     }
 
 }

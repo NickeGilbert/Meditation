@@ -31,6 +31,8 @@ import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
 import com.myprojects.nicklasgilbertsson.meditation.ProfileActivity;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
+import static android.support.constraint.Constraints.TAG;
+
 public class SignupActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword, inputUsername;
@@ -47,6 +49,8 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         auth = FirebaseAuth.getInstance();
+
+        Log.d(TAG, "onCreate: " + userId);
 
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
