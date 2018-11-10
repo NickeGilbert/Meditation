@@ -84,7 +84,10 @@
         <activity android:name=".AccountActivity.SignupActivity" />
         <activity android:name=".AccountActivity.ResetPasswordActivity" />
         <activity android:name=".BottomNavigationActivity" />
-        <activity android:name=".SoundActivity" android:label="Your sounds"></activity>
+        <activity
+            android:name=".SoundActivity"
+            android:label="Your sounds" />
+        <activity android:name=".SubscriptionActivity" android:label="Subscription"></activity>
     </application>
 
 </manifest>

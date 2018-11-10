@@ -15,7 +15,7 @@ public class StartActivity extends Fragment {
 
     View view;
 
-    private Button startMeditation, open_music_button;
+    private Button startMeditation, open_music_button, subscription;
 
 
     @Override
@@ -25,6 +25,7 @@ public class StartActivity extends Fragment {
 
         startMeditation = view.findViewById(R.id.startMeditation);
         open_music_button = view.findViewById(R.id.soundButton);
+        subscription = view.findViewById(R.id.subscription_button);
 
         startMeditation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +42,16 @@ public class StartActivity extends Fragment {
                 startActivity(intent);
             }
         });
+
+        subscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SubscriptionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         return view;
     }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerVertical="true"
+        android:textSize="37dp"
+        android:gravity="center"
+        android:text="Find your inner peace"
+        android:fontFamily="@font/timeless"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:text="Loose yourself with you inner thaughts and lets meditate until timer stops."
+        android:fontFamily="@font/timeless"
+        android:padding="10dp"/>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/enterMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/startTimer"
+            android:hint="@string/enter_minutes"
+            android:padding="10dp"
+            android:maxLength="4"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:orientation="vertical"
+            android:fontFamily="@font/timeless"/>
+
+        <Button
+            android:id="@+id/startTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_corners"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:text="@string/start_timer"
+            android:fontFamily="@font/timeless"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countdownText"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"
+        android:text="@string/timer"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/timeless"/>
+
+    <Button
+        android:id="@+id/resetTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_corners"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="@string/reset_timer"
+        android:fontFamily="@font/timeless"/>
+
+
+</LinearLayout>

@@ -50,10 +50,11 @@
                 android:id="@+id/startMeditation"
                 android:layout_marginTop="30px"
                 android:layout_marginLeft="80px"
-                android:layout_width="350dp"
+                android:layout_marginRight="80px"
+                android:layout_width="300sp"
                 android:layout_height="200px"
                 android:text="Meditation"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/rounded_corners"
                 android:textColor="#fff"/>
 
             <TextView
@@ -96,13 +97,14 @@
                 android:background="@drawable/focus" />
 
             <Button
+                android:id="@+id/subscription_button"
                 android:layout_width="500px"
                 android:layout_height="150px"
                 android:layout_gravity="center"
                 android:layout_marginTop="80px"
                 android:layout_marginBottom="300px"
                 android:text="Subscribe now!"
-                android:background="@drawable/rounded_corners"
+                android:background="@drawable/subscription_button"
                 android:textColor="#fff"/>
 
 

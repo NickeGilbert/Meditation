@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#fff"
-            android:background="@drawable/rounded_corners"
+            android:background="@drawable/subscription_button"
             android:text="Play music"/>
         <TextView
             android:id="@+id/sound_title"
