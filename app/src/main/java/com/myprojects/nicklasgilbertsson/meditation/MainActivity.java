@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 // We use intents to start activities
                 Intent intent = new Intent(getBaseContext(), activity);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 // `intent.putExtra(...)` is used to pass on extra information to the next activity
                 intent.putExtra("ACTIVITY_LIST", activityList);
                 startActivity(intent);

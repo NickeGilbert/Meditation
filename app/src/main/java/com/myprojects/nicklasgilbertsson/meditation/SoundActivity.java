@@ -17,6 +17,8 @@ public class SoundActivity extends AppCompatActivity {
     private RecyclerView mSoundList;
     private DatabaseReference mDatabase;
 
+    //https://medium.com/@ssaurel/implement-audio-streaming-in-android-applications-8758d3bc62f1
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -122,6 +122,7 @@ public class NineActivity extends AppCompatActivity {
                     // Starting the activity, and passing on the remaining number of activities
                     // to the next one that is opened
                     Intent intent = new Intent(getBaseContext(), activity);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("ACTIVITY_LIST", activityList);
                     startActivity(intent);
                 }

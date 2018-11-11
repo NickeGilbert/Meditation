@@ -91,7 +91,9 @@
         android:textColor="#fff"
         android:textSize="16sp"
         android:text="@string/reset_timer"
-        android:fontFamily="@font/timeless"/>
+        android:fontFamily="@font/timeless"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
 
 
 </LinearLayout>
