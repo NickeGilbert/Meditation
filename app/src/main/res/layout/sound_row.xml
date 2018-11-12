@@ -10,25 +10,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
         android:background="@color/colorPrimary">
 
-        <Button
-            android:id="@+id/play_music_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:background="@drawable/subscription_button"
-            android:text="Play music"/>
-        <TextView
-            android:id="@+id/sound_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textColor="#fff" />
-
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/sound_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Hello"
+        android:paddingTop="5dp"
+        app:fontFamily="@font/timeless"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/play_music_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textColor="#fff"
+        android:background="@drawable/subscription_button"
+        app:fontFamily="@font/timeless"
+        android:text="Play"/>
 
 </android.support.v7.widget.CardView>

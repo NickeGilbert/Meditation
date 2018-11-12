@@ -24,7 +24,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Start your subscription today and get access to tons of more content!"
+        android:text="subscription"
         android:fontFamily="@font/timeless"
         android:textSize="20dp"
         android:padding="10dp"

@@ -138,6 +138,7 @@ public class ThirdActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("ACTIVITY_LIST", activityList);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

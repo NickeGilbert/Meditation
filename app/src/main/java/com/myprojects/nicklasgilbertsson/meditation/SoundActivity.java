@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -16,8 +17,10 @@ public class SoundActivity extends AppCompatActivity {
 
     private RecyclerView mSoundList;
     private DatabaseReference mDatabase;
+    private ProgressBar progressBar;
 
     //https://medium.com/@ssaurel/implement-audio-streaming-in-android-applications-8758d3bc62f1
+    //https://www.youtube.com/watch?v=GV7wQkacwIc
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class SoundActivity extends AppCompatActivity {
         mDatabase.keepSynced(true);
 
         mSoundList = (RecyclerView)findViewById(R.id.myRecyclerview);
+        progressBar = (ProgressBar)findViewById(R.id.myProgressbar);
         mSoundList.setHasFixedSize(true);
         mSoundList.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -34,11 +38,13 @@ public class SoundActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        progressBar.setVisibility(View.VISIBLE);
         FirebaseRecyclerAdapter<Sounds, SoundViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Sounds, SoundViewHolder>
                 (Sounds.class, R.layout.sound_row, SoundViewHolder.class, mDatabase) {
 
             @Override
             protected void populateViewHolder(SoundViewHolder viewHolder, Sounds model, int position) {
+                progressBar.setVisibility(View.GONE);
                 viewHolder.setTitle(model.getTitle());
                // viewHolder.setSong(model.getSong()); Ska säkerligen läggas in här sen!
             }

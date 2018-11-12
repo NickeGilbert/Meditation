@@ -9,7 +9,6 @@ import android.view.MenuItem;
 
 public class BottomNavigationActivity extends AppCompatActivity {
 
-    // Titta på denna videon för att använda Activity istället för Fragment https://www.youtube.com/watch?v=xyGrdOqseuw
 
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);

@@ -21,6 +21,7 @@
             android:layout_marginBottom="30dp"
             android:src="@mipmap/ic_launcher"
             android:contentDescription=""
+            app:fontFamily="@font/timeless"
             tools:ignore="ContentDescription" />
 
 
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="@string/hint_email"
+            app:fontFamily="@font/timeless"
             android:inputType="textEmailAddress" />
 
 
@@ -40,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="@string/hint_password"
+            app:fontFamily="@font/timeless"
             android:inputType="textPassword" />
 
 
@@ -52,6 +55,7 @@
             android:layout_marginTop="20dip"
             android:background="@color/colorPrimary"
             android:text="@string/btn_login"
+            app:fontFamily="@font/timeless"
             android:textColor="#fff" />
 
         <Button
@@ -61,6 +65,7 @@
             android:layout_marginTop="20dip"
             android:background="@null"
             android:text="@string/btn_forgot_password"
+            app:fontFamily="@font/timeless"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark" />
 
@@ -75,6 +80,7 @@
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textSize="15dp"
+            app:fontFamily="@font/timeless"
             tools:ignore="SpUsage" />
     </LinearLayout>
 

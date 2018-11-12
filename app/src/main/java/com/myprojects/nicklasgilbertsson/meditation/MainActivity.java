@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     case 13:
                         activity = ThirteenActivity.class;
                         activityList.remove(ThirteenActivity.class);
+                        break;
                     default:
                         activity = FourteenActivity.class;
                         activityList.remove(FourteenActivity.class);
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 // `intent.putExtra(...)` is used to pass on extra information to the next activity
                 intent.putExtra("ACTIVITY_LIST", activityList);
                 startActivity(intent);
+                finish();
             }
         });
     }

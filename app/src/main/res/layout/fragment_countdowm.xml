@@ -16,7 +16,7 @@
         android:layout_centerVertical="true"
         android:textSize="37dp"
         android:gravity="center"
-        android:text="Find your inner peace"
+        android:text="@string/subscription_title"
         android:fontFamily="@font/timeless"/>
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:layout_centerVertical="true"
-        android:text="Loose yourself with you inner thaughts and lets meditate until timer stops."
+        android:text="@string/subscription_text"
         android:fontFamily="@font/timeless"
         android:padding="10dp"/>
 

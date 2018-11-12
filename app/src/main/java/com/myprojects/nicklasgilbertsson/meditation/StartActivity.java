@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import static android.support.constraint.Constraints.TAG;
 
@@ -46,8 +47,9 @@ public class StartActivity extends Fragment {
         subscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SubscriptionActivity.class);
-                startActivity(intent);
+              //  Intent intent = new Intent(getActivity(), SubscriptionActivity.class);
+              //  startActivity(intent);
+                Toast.makeText(getActivity(), "Currently unavailable", Toast.LENGTH_SHORT).show();
             }
         });
 

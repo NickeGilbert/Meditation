@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
-                android:layout_height="233dp"
+                android:layout_height="300dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="11dp"
@@ -34,11 +34,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:layout_marginLeft="30dp"
-                android:fontFamily="@font/timeless"
-                android:text="Everyday Mantra"
+                app:fontFamily="@font/timeless"
+                android:text="@string/top_title"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_gravity="left"/>
+                android:layout_gravity="start"/>
 
             <Button
                 android:id="@+id/startMeditation"
@@ -47,7 +47,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="Meditation"
+                android:text="@string/meditation_exercise"
+                app:fontFamily="@font/timeless"
                 android:background="@drawable/rounded_corners"
                 android:textColor="#fff"/>
 
@@ -58,27 +59,41 @@
                 android:layout_below="@+id/imageView7"
                 android:layout_marginTop="36dp"
                 android:layout_marginLeft="30dp"
-                android:fontFamily="@font/timeless"
-                android:text="My lessons"
+                app:fontFamily="@font/timeless"
+                android:text="@string/my_lessons_title"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_gravity="left"/>
+                android:layout_gravity="start"/>
 
             <Button
                 android:id="@+id/soundButton"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/round_button"
-                android:text="Sound"
+                android:text="@string/music_button"
+                app:fontFamily="@font/timeless"
                 android:textColor="#fff"
-                android:layout_gravity="left"/>
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="36dp"
+                app:fontFamily="@font/timeless"
+                android:text="@string/pitch_text"
+                android:textSize="15sp"
+                android:layout_gravity="start"/>
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
-                android:layout_height="233dp"
+                android:layout_height="300dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="11dp"
@@ -93,7 +108,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="100dp"
-                android:text="Subscribe now!"
+                app:fontFamily="@font/timeless"
+                android:text="@string/subscribe_button"
                 android:background="@drawable/subscription_button"
                 android:textColor="#fff"/>
 

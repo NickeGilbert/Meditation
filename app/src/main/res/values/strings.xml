@@ -102,6 +102,24 @@
     <string name="title_dashboard">Meditation</string>
     <string name="title_notifications">Profile</string>
 
+    //Start activity
+    <string name="meditation_exercise">Meditation exercise</string>
+    <string name="pitch_text">Find your inner peace and learn to grow to a stronger human being.</string>
+    <string name="my_lessons_title">My lessons</string>
+    <string name="music_button">Your first steps</string>
+    <string name="subscribe_button">Subscribe now!</string>
+    <string name="top_title">Everyday Mantra</string>
+
+    //First activity
+    <string name="next_exercise">NEXT EXERCISE</string>
+
+    //Subscription activity
+    <string name="subscription">Start your subscription today and get access to tons of more content!</string>
+
+    //Countdown activity
+    <string name="subscription_title">Find your inner peace</string>
+    <string name="subscription_text">Loose yourself with you inner thaughts and lets meditate until timer stops.</string>
+
 
     <string name="enter_minutes">Minutes!</string>
     <string name="start_timer">Start Timer</string>
