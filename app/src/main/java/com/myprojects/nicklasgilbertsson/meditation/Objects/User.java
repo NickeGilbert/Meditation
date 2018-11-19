@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.AccountActivity;
+package com.myprojects.nicklasgilbertsson.meditation.Objects;
 
 import android.util.Log;
 

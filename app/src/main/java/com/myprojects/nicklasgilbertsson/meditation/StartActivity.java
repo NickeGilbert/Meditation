@@ -49,7 +49,7 @@ public class StartActivity extends Fragment {
             public void onClick(View v) {
               //  Intent intent = new Intent(getActivity(), SubscriptionActivity.class);
               //  startActivity(intent);
-                Toast.makeText(getActivity(), "Currently unavailable", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Currently unavailable. More amazing content will be added!", Toast.LENGTH_LONG).show();
             }
         });
 

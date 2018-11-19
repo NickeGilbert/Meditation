@@ -25,7 +25,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
                     selectedFragment = new StartActivity();
                     break;
                 case R.id.navigation_dashboard:
-                    selectedFragment = new CountdowmFragment();
+                    selectedFragment = new MiddleNavigation();
                     break;
                 case R.id.navigation_notifications:
                     selectedFragment = new ProfileActivity();
