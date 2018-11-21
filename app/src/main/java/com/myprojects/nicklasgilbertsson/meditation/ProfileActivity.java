@@ -27,8 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.myprojects.nicklasgilbertsson.meditation.AccountActivity.LoginActivity;
-import com.myprojects.nicklasgilbertsson.meditation.AccountActivity.SignupActivity;
+import com.myprojects.nicklasgilbertsson.meditation.account_activity.LoginActivity;
+import com.myprojects.nicklasgilbertsson.meditation.account_activity.SignupActivity;
 
 import static android.content.ContentValues.TAG;
 
@@ -177,16 +177,6 @@ public class ProfileActivity extends Fragment {
             }
         });
         return view;
-    }
-
-    private void removeUser() {
-
-
-
-
-        //DatabaseReference userPath = FirebaseDatabase.getInstance().getReference("users").child(id);
-       // userPath.removeValue();
-
     }
 
     @SuppressLint("SetTextI18n")

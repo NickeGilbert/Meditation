@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.AccountActivity;
+package com.myprojects.nicklasgilbertsson.meditation.account_activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

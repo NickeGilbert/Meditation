@@ -13,13 +13,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class CountdownActivity extends AppCompatActivity {
 
-    private static TextView countdownTimerText;
-    private static EditText minutes;
-    private static Button startTimer, resetTimer;
+    private TextView countdownTimerText;
+    private EditText minutes;
+    private Button startTimer, resetTimer;
     private static CountDownTimer countDownTimer;
 
     @Override
@@ -80,9 +81,9 @@ public class CountdownActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 long millis = millisUntilFinished;
                 //Convert milliseconds into hour,minute and seconds
-                String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis), TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)), TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
+                String hms = String.format(Locale.getDefault(), "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis), TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)), TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
                 countdownTimerText.setText(hms);//set text
-            }//
+            }
 
             public void onFinish() {
 

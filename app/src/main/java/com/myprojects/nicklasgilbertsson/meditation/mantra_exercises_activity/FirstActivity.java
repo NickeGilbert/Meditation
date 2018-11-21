@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
+package com.myprojects.nicklasgilbertsson.meditation.mantra_exercises_activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,19 +8,19 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
-import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class TwelfthActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_twelfth);
-        final Button myButton = (Button) findViewById(R.id.button5);
+        setContentView(R.layout.activity_first);
+
+        final Button myButton = (Button) findViewById(R.id.button1);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,16 +30,14 @@ public class TwelfthActivity extends AppCompatActivity {
 
                 if(activityList.size() == 0) {
                     // Do something when after all activities have been opened
-                    //     doSomeAction();
-
+               //     doSomeAction();
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(TwelfthActivity.this, BottomNavigationActivity.class);
-                        TwelfthActivity.this.startActivity(intent);
+                        Intent intent = new Intent(FirstActivity.this, BottomNavigationActivity.class);
+                        FirstActivity.this.startActivity(intent);
                     }
                     });
-
                     Toast.makeText(getApplicationContext(), "Finished! Tap again to restart", Toast.LENGTH_LONG).show();
                 } else {
                     // Now, the random number is generated between 1 and however many

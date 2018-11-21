@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
+package com.myprojects.nicklasgilbertsson.meditation.mantra_exercises_activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,41 +8,43 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
-import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class FirstActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
-
-        final Button myButton = (Button) findViewById(R.id.button1);
+        setContentView(R.layout.activity_second);
+        final Button myButton = (Button) findViewById(R.id.button2);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 ArrayList<Class> activityList = new ArrayList<>();
                 Bundle extras = getIntent().getExtras();
                 activityList = (ArrayList<Class>) extras.get("ACTIVITY_LIST");
 
                 if(activityList.size() == 0) {
                     // Do something when after all activities have been opened
-               //     doSomeAction();
+                    //     doSomeAction();
+
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(FirstActivity.this, BottomNavigationActivity.class);
-                        FirstActivity.this.startActivity(intent);
+                        Intent intent = new Intent(SecondActivity.this, BottomNavigationActivity.class);
+                        SecondActivity.this.startActivity(intent);
                     }
                     });
+
                     Toast.makeText(getApplicationContext(), "Finished! Tap again to restart", Toast.LENGTH_LONG).show();
                 } else {
                     // Now, the random number is generated between 1 and however many
                     // activities we have remaining
+
                     Random generator = new Random();
                     int number = generator.nextInt(activityList.size()) + 1;
 

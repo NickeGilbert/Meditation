@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
+package com.myprojects.nicklasgilbertsson.meditation.mantra_exercises_activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
-import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
 import java.util.ArrayList;

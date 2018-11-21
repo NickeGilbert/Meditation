@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MantraExercisesActivity.SeventhActivity">
+    tools:context=".mantra_exercises_activity.SeventhActivity">
 
     <ImageView
         android:id="@+id/imageView2"

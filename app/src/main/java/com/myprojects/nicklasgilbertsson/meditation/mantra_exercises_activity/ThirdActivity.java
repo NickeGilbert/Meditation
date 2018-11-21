@@ -1,6 +1,7 @@
-package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
+package com.myprojects.nicklasgilbertsson.meditation.mantra_exercises_activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,23 +9,32 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
-import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class SecondActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
-        final Button myButton = (Button) findViewById(R.id.button2);
+        setContentView(R.layout.activity_third);
+
+        Button musicButton = (Button) findViewById(R.id.open_music_button);
+        musicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("http://open.spotify.com"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        final Button myButton = (Button) findViewById(R.id.button3);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 ArrayList<Class> activityList = new ArrayList<>();
                 Bundle extras = getIntent().getExtras();
                 activityList = (ArrayList<Class>) extras.get("ACTIVITY_LIST");
@@ -32,12 +42,11 @@ public class SecondActivity extends AppCompatActivity {
                 if(activityList.size() == 0) {
                     // Do something when after all activities have been opened
                     //     doSomeAction();
-
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(SecondActivity.this, BottomNavigationActivity.class);
-                        SecondActivity.this.startActivity(intent);
+                        Intent intent = new Intent(ThirdActivity.this, BottomNavigationActivity.class);
+                        ThirdActivity.this.startActivity(intent);
                     }
                     });
 
@@ -45,7 +54,6 @@ public class SecondActivity extends AppCompatActivity {
                 } else {
                     // Now, the random number is generated between 1 and however many
                     // activities we have remaining
-
                     Random generator = new Random();
                     int number = generator.nextInt(activityList.size()) + 1;
 

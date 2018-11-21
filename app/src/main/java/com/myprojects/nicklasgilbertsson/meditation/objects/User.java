@@ -1,6 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.Objects;
-
-import android.util.Log;
+package com.myprojects.nicklasgilbertsson.meditation.objects;
 
 public class User {
     public String email;

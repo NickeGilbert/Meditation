@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.AccountActivity;
+package com.myprojects.nicklasgilbertsson.meditation.account_activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
-import com.myprojects.nicklasgilbertsson.meditation.Objects.User;
+import com.myprojects.nicklasgilbertsson.meditation.objects.User;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
 import static android.support.constraint.Constraints.TAG;

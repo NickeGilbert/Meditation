@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.MantraExercisesActivity;
+package com.myprojects.nicklasgilbertsson.meditation.mantra_exercises_activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,18 +8,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
-import com.myprojects.nicklasgilbertsson.meditation.MainActivity;
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class EightActivity extends AppCompatActivity {
+public class ThirteenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eight);
+        setContentView(R.layout.activity_thirteen);
         final Button myButton = (Button) findViewById(R.id.button5);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,8 +34,8 @@ public class EightActivity extends AppCompatActivity {
                     myButton.setOnClickListener(new View.OnClickListener()
                     {    public void onClick(View v)
                     {
-                        Intent intent = new Intent(EightActivity.this, BottomNavigationActivity.class);
-                        EightActivity.this.startActivity(intent);
+                        Intent intent = new Intent(ThirteenActivity.this, BottomNavigationActivity.class);
+                        ThirteenActivity.this.startActivity(intent);
                     }
                     });
 

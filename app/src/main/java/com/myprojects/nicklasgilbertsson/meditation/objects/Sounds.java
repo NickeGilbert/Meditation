@@ -1,4 +1,4 @@
-package com.myprojects.nicklasgilbertsson.meditation.Objects;
+package com.myprojects.nicklasgilbertsson.meditation.objects;
 
 public class Sounds {
     private String title;
