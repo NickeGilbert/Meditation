@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.myprojects.nicklasgilbertsson.meditation.BottomNavigationActivity;
@@ -36,7 +38,6 @@ public class SignupActivity extends AppCompatActivity {
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
     String userId = mDatabase.push().getKey();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +49,10 @@ public class SignupActivity extends AppCompatActivity {
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
-
         inputUsername = (EditText) findViewById(R.id.username);
-
         inputPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressbar_spinner));
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +98,14 @@ public class SignupActivity extends AppCompatActivity {
                             Toast.makeText(SignupActivity.this, "Authentication failed" + task.getException(), Toast.LENGTH_SHORT).show();
                         } else {
                             mDatabase.child(userId).setValue(user);
+
+                            FirebaseUser user = auth.getCurrentUser();
+
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(inputUsername.getText().toString()).build();
+
+                            user.updateProfile(profileUpdates);
+
                             startActivity(new Intent(SignupActivity.this, BottomNavigationActivity.class));
                             finish();
                         }

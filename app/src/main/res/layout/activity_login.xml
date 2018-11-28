@@ -53,7 +53,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corners"
             android:text="@string/btn_login"
             app:fontFamily="@font/timeless"
             android:textColor="#fff" />

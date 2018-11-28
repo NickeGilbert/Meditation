@@ -65,6 +65,16 @@
                 android:textStyle="bold"
                 android:layout_gravity="start"/>
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorPrimary">
+
+
+            </android.support.v7.widget.RecyclerView>
+
             <Button
                 android:id="@+id/soundButton"
                 android:layout_width="100dp"

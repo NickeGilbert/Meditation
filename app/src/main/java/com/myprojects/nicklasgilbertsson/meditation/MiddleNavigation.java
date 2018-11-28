@@ -41,4 +41,13 @@ public class MiddleNavigation extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Set title bar
+        ((BottomNavigationActivity) getActivity())
+                .setActionBarTitle("Meditation");
+    }
 }

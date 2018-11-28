@@ -24,17 +24,8 @@
             app:fontFamily="@font/timeless"
             android:textColor="#fff" />
 
+
+
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/play_music_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:textColor="#fff"
-        android:background="@drawable/play_music_button"
-        app:fontFamily="@font/timeless"
-        android:text="Play"/>
 
 </android.support.v7.widget.CardView>

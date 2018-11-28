@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corners"
             app:fontFamily="@font/timeless"
             android:text="@string/action_sign_in_short"
             android:textColor="#fff"

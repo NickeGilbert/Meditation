@@ -6,31 +6,88 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/yoga_button"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:text="YOGA"
-        android:fontFamily="@font/timeless"
-        android:textColor="#fff"
-        android:background="@drawable/rounded_corners"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="53dp" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/countdown_button"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:text="Self Meditation"
-        android:fontFamily="@font/timeless"
-        android:textColor="#fff"
-        android:background="@drawable/rounded_corners"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="136dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/yoga"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yoga is a gret way to help you relax and get a stronger body to help manage your daily callenges!"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/timeless"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/yoga_button"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="YOGA"
+                android:fontFamily="@font/timeless"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_corners"
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="53dp" />
+
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Me time!"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/timeless"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A healthy dose of self meditation helps you bring inner peace and lets you grow to overcome mental challenges!"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/timeless"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="80dp"
+                android:id="@+id/countdown_button"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="Self Meditation"
+                android:fontFamily="@font/timeless"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_corners"
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="136dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

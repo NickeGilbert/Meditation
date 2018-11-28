@@ -22,6 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:text="NEXT EXERCISE"
+        android:fontFamily="@font/timeless"
+        android:textStyle="normal"
         android:background="@color/button_color"
         app:layout_constraintBottom_toBottomOf="parent" />
 

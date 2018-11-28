@@ -29,6 +29,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.myprojects.nicklasgilbertsson.meditation.account_activity.LoginActivity;
 import com.myprojects.nicklasgilbertsson.meditation.account_activity.SignupActivity;
+import com.myprojects.nicklasgilbertsson.meditation.objects.User;
 
 import static android.content.ContentValues.TAG;
 
@@ -37,7 +38,6 @@ public class ProfileActivity extends Fragment {
     View view;
 
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
-    String userId;
 
     private Button btnChangePassword, btnRemoveUser, changePassword, remove, signOut;
     private TextView email;
@@ -54,10 +54,7 @@ public class ProfileActivity extends Fragment {
         email = (TextView) view.findViewById(R.id.useremail);
 
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String userId = mDatabase.getKey();
         setDataToView(user);
-       // removeUser();
-        Log.d(TAG, "USEREMAIL: EMAIL " + user.getEmail() + " KEY" + userId);
 
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -74,17 +71,16 @@ public class ProfileActivity extends Fragment {
         btnChangePassword = (Button) view.findViewById(R.id.change_password_button);
         btnRemoveUser = (Button) view.findViewById(R.id.remove_user_button);
         changePassword = (Button) view.findViewById(R.id.changePass);
-
         remove = (Button) view.findViewById(R.id.remove);
         signOut = (Button) view.findViewById(R.id.sign_out);
-
         newPassword = (EditText) view.findViewById(R.id.newPassword);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        progressBar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressbar_spinner));
 
         newPassword.setVisibility(View.GONE);
         changePassword.setVisibility(View.GONE);
         remove.setVisibility(View.GONE);
 
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
         if (progressBar != null) {
             progressBar.setVisibility(View.GONE);
@@ -181,7 +177,7 @@ public class ProfileActivity extends Fragment {
 
     @SuppressLint("SetTextI18n")
     private void setDataToView(FirebaseUser user) {
-        email.setText("User Email: " + user.getEmail());
+        email.setText("Welcome back: " + user.getDisplayName());
     }
 
     FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {

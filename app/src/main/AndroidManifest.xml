@@ -109,7 +109,10 @@
             android:name=".YogaActivity"
             android:label="Yoga"
             android:screenOrientation="portrait" />
-        <activity android:name=".YogaDetailActivity" android:label="Exercises"></activity>
+        <activity
+            android:name=".YogaDetailActivity"
+            android:label="Exercises" />
+        <activity android:name=".SoundDetailActivity"></activity>
     </application>
 
 </manifest>

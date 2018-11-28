@@ -44,8 +44,6 @@ public class User {
     public void setKey(String key) {
         this.key = key;
     }
-    // Default constructor required for calls to
-    // DataSnapshot.getValue(User.class)
 
     public User() {
     }

@@ -32,8 +32,6 @@ public class YogaActivity extends AppCompatActivity {
 
     private ProgressBar mProgressbar;
 
-    //Custom listview that passes data https://www.youtube.com/watch?v=S7U2rZ83tWM
-    // This might be a better video! Listen closely https://www.youtube.com/watch?v=q2XA0Pe2W04
     //This is the best one! https://www.youtube.com/watch?v=-ofYpirp4wA
 
     @Override
@@ -42,6 +40,7 @@ public class YogaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_yoga);
 
         mProgressbar = (ProgressBar)findViewById(R.id.yogaProgressbar);
+        mProgressbar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressbar_spinner));
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
