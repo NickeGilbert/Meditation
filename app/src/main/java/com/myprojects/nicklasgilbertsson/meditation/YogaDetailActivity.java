@@ -29,7 +29,5 @@ public class YogaDetailActivity extends AppCompatActivity {
         mDetailTitle.setText(title);
         mDetailImage.setImageBitmap(bmp);
         mDetailDesc.setText(desc);
-
-
     }
 }

@@ -1,6 +1,7 @@
 package com.myprojects.nicklasgilbertsson.meditation;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
+
+import static android.app.Service.START_STICKY;
 
 public class SoundDetailActivity extends AppCompatActivity {
 
@@ -46,8 +50,6 @@ public class SoundDetailActivity extends AppCompatActivity {
 
         String title = getIntent().getStringExtra("title");
         final String audioFile = getIntent().getStringExtra("song");
-
-
 
         mButton = (Button) findViewById(R.id.myMusicBtn);
         mDetailTitle = (TextView) findViewById(R.id.mySoundTitle);
@@ -80,17 +82,8 @@ public class SoundDetailActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
 
-        if (mMediaplayer != null) {
-            mMediaplayer.reset();
-            mMediaplayer.release();
-            mMediaplayer = null;
-        }
     }
 
     class Player extends AsyncTask<String, Void, Boolean> {
@@ -125,7 +118,6 @@ public class SoundDetailActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Boolean aBoolean) {
             super.onPostExecute(aBoolean);
-
             if (progressDialog.isShowing()) {
                 progressDialog.cancel();
             }
@@ -138,14 +130,15 @@ public class SoundDetailActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             progressDialog.setMessage("Fetching your awesome tune...");
+            progressDialog.setCancelable(false);
             progressDialog.show();
+
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         if (mMediaplayer != null) {
             mMediaplayer.stop();
         } else {

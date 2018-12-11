@@ -1,13 +1,13 @@
 package com.myprojects.nicklasgilbertsson.meditation.objects;
 
-public class Sounds {
+public class CollectionRow {
     private String title;
 
-    public Sounds(String title, String song, String subscription) {
+    public CollectionRow(String title) {
         this.title = title;
 
     }
-    
+
     public String getTitle() {
         return title;
     }
@@ -16,7 +16,7 @@ public class Sounds {
         this.title = title;
     }
 
-    public Sounds() {
+    public CollectionRow() {
 
     }
 }

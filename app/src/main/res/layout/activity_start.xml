@@ -15,7 +15,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -65,27 +65,31 @@
                 android:textStyle="bold"
                 android:layout_gravity="start"/>
 
+
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:orientation="horizontal"
+                android:id="@+id/myRecyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@color/colorPrimary">
-
-
+                android:layout_height="150dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
             </android.support.v7.widget.RecyclerView>
 
-            <Button
-                android:id="@+id/soundButton"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/round_button"
-                android:text="@string/music_button"
-                app:fontFamily="@font/timeless"
-                android:textColor="#fff"
-                android:layout_gravity="start"/>
+
+                    <Button
+                        android:id="@+id/soundButton"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/round_button"
+                        android:text="@string/music_button"
+                        app:fontFamily="@font/timeless"
+                        android:textColor="#fff"
+                        android:layout_gravity="start"/>
+
+
+
 
             <TextView
                 android:id="@+id/textView8"

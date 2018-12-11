@@ -111,8 +111,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".YogaDetailActivity"
-            android:label="Exercises" />
-        <activity android:name=".SoundDetailActivity"></activity>
+            android:label="Exercises" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SoundDetailActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

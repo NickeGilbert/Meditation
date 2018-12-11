@@ -30,6 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.myprojects.nicklasgilbertsson.meditation.objects.Sounds;
+import com.myprojects.nicklasgilbertsson.meditation.objects.User;
 import com.myprojects.nicklasgilbertsson.meditation.view_holders.SoundViewHolder;
 import com.myprojects.nicklasgilbertsson.meditation.view_holders.YogaViewHolder;
 
@@ -50,7 +51,10 @@ public class SoundActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound);
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("users-sound");
+        String collectionTitle = getIntent().getStringExtra("collectionValue");
+        Log.d(TAG, "onCreate: " + collectionTitle);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("users-sound").child(collectionTitle);
         mDatabase.keepSynced(true);
 
         mSoundList = (RecyclerView)findViewById(R.id.myRecyclerview);
@@ -73,7 +77,8 @@ public class SoundActivity extends AppCompatActivity {
                 final String audio_key = getRef(position).getKey();
                 viewHolder.setTitle(model.getTitle());
 
-                viewHolder.setOnClickListener(new YogaViewHolder.ClickListener() {
+
+                viewHolder.setOnClickListener(new SoundViewHolder.ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
 
@@ -85,10 +90,10 @@ public class SoundActivity extends AppCompatActivity {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 String audioFile = (String) dataSnapshot.child("song").getValue();
-                                String audioTitle = mTitle;
+                               // String audioTitle = mTitle;
 
                                 Intent intent = new Intent(getApplicationContext(), SoundDetailActivity.class);
-                                intent.putExtra("title", audioTitle);
+                               // intent.putExtra("title", audioTitle);
                                 intent.putExtra("song", audioFile);
                                 startActivity(intent);
                             }

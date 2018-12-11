@@ -13,5 +13,9 @@ public class SubscriptionActivity extends AppCompatActivity {
         //För subscirption payment https://www.youtube.com/watch?v=nkze5-eDInQ
         //Eller denna videon https://www.youtube.com/watch?v=-uwr_KOzwaE
         //https://medium.com/@KarthikPonnam/inapp-purchase-subscription-android-8fff52fa4d3b
+
+
+        //För att fixa det i kod
+        //https://stackoverflow.com/questions/47438092/in-app-billing-connect-to-firebase-and-get-products
     }
 }

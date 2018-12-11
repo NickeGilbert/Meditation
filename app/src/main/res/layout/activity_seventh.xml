@@ -24,7 +24,7 @@
         android:text="NEXT EXERCISE"
         android:fontFamily="@font/timeless"
         android:textStyle="normal"
-        android:background="@color/button_color"
+        android:background="@color/meditation_exercise_button_color"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView

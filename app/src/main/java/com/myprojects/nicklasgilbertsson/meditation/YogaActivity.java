@@ -99,6 +99,7 @@ public class YogaActivity extends AppCompatActivity {
 
         mRecyclerView.setAdapter(firebaseRecyclerAdapter);
     }
+
 }
 
 

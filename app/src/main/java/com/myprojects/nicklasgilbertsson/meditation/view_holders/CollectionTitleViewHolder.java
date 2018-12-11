@@ -1,18 +1,16 @@
 package com.myprojects.nicklasgilbertsson.meditation.view_holders;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.myprojects.nicklasgilbertsson.meditation.R;
 
-public class SoundViewHolder extends RecyclerView.ViewHolder {
+public class CollectionTitleViewHolder extends RecyclerView.ViewHolder  {
 
     View mView;
 
-    public SoundViewHolder(View itemView)
+    public CollectionTitleViewHolder(View itemView)
     {
         super(itemView);
         mView = itemView;
@@ -27,17 +25,18 @@ public class SoundViewHolder extends RecyclerView.ViewHolder {
 
     public void setTitle(String title)
     {
-        TextView sound_title = (TextView) mView.findViewById(R.id.sound_title);
-        sound_title.setText(title);
+        Button collection_title = (Button) mView.findViewById(R.id.collectionButtonRow);
+        collection_title.setText(title);
+
     }
 
-    private SoundViewHolder.ClickListener mClickListener;
+    private CollectionTitleViewHolder.ClickListener mClickListener;
 
     public interface ClickListener {
         void onItemClick(View view, int position);
     }
 
-    public void setOnClickListener(SoundViewHolder.ClickListener clickListener) {
+    public void setOnClickListener(CollectionTitleViewHolder.ClickListener clickListener) {
         mClickListener = clickListener;
     }
 }
