@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -22,6 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.myprojects.nicklasgilbertsson.meditation.objects.CollectionRow;
 import com.myprojects.nicklasgilbertsson.meditation.view_holders.CollectionTitleViewHolder;
+
+import java.util.ArrayList;
+
 import static android.content.ContentValues.TAG;
 
 public class StartActivity extends Fragment {
@@ -32,12 +34,11 @@ public class StartActivity extends Fragment {
     RecyclerView mRecyclerView;
 
     private RecyclerView.LayoutManager layoutManager;
-
-    private Button startMeditation, open_music_button, subscription;
-    private String collectionValue;
+    private Button startMeditation, subscription;
+    final ArrayList<String> myCollectionTitleArray = new ArrayList<String>();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         view = inflater.inflate(R.layout.activity_start, container, false);
 
@@ -47,20 +48,19 @@ public class StartActivity extends Fragment {
         mRecyclerView.setLayoutManager(layoutManager);
 
         startMeditation = view.findViewById(R.id.startMeditation);
-        open_music_button = view.findViewById(R.id.soundButton);
         subscription = view.findViewById(R.id.subscription_button);
 
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("users-sound");
 
-        Log.d(TAG, "onCreateView: " + collectionValue);
+
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Log.e(TAG, "onDataChange"+postSnapshot.getKey());
-                    collectionValue = postSnapshot.getKey();
+                    myCollectionTitleArray.add(postSnapshot.getKey());
                 }
             }
 
@@ -74,14 +74,6 @@ public class StartActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        open_music_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(view.getContext(), SoundActivity.class);
                 startActivity(intent);
             }
         });
@@ -105,12 +97,12 @@ public class StartActivity extends Fragment {
                 (CollectionRow.class, R.layout.button_row, CollectionTitleViewHolder.class, mRef) {
             @Override
             protected void populateViewHolder(final CollectionTitleViewHolder viewHolder, final CollectionRow model, int position) {
-                Log.d(TAG, "populateViewHolder: " + collectionValue);
 
-                viewHolder.setTitle(collectionValue);
+                viewHolder.setTitle(myCollectionTitleArray.get(position));
+
                 viewHolder.setOnClickListener(new CollectionTitleViewHolder.ClickListener() {
                     @Override
-                    public void onItemClick(View view, int position) {
+                    public void onItemClick(View view, final int position) {
 
                         mRef.addValueEventListener(new ValueEventListener() {
 
@@ -118,7 +110,7 @@ public class StartActivity extends Fragment {
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                                 Intent intent = new Intent(getContext(), SoundActivity.class);
-                                intent.putExtra("collectionValue", collectionValue);
+                                intent.putExtra("collectionValue", myCollectionTitleArray.get(position));
                                 startActivity(intent);
                             }
 

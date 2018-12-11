@@ -52,9 +52,10 @@ public class SoundActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound);
         String collectionTitle = getIntent().getStringExtra("collectionValue");
-        Log.d(TAG, "onCreate: " + collectionTitle);
+       // Log.d(TAG, "onCreate: " + collectionTitle);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("users-sound").child(collectionTitle);
+        Log.d(TAG, "onCreate: " + mDatabase);
         mDatabase.keepSynced(true);
 
         mSoundList = (RecyclerView)findViewById(R.id.myRecyclerview);

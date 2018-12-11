@@ -27,6 +27,12 @@ public class CollectionTitleViewHolder extends RecyclerView.ViewHolder  {
     {
         Button collection_title = (Button) mView.findViewById(R.id.collectionButtonRow);
         collection_title.setText(title);
+        collection_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mClickListener.onItemClick(v, getAdapterPosition());
+            }
+        });
 
     }
 

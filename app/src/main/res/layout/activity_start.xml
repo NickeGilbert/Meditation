@@ -70,26 +70,11 @@
                 android:id="@+id/myRecyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:orientation="horizontal">
             </android.support.v7.widget.RecyclerView>
-
-
-                    <Button
-                        android:id="@+id/soundButton"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="30dp"
-                        android:background="@drawable/round_button"
-                        android:text="@string/music_button"
-                        app:fontFamily="@font/timeless"
-                        android:textColor="#fff"
-                        android:layout_gravity="start"/>
-
-
-
 
             <TextView
                 android:id="@+id/textView8"
