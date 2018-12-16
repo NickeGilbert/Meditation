@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -56,6 +57,9 @@ public class ProfileActivity extends Fragment {
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         setDataToView(user);
 
+        facebookPost();
+
+
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -80,6 +84,18 @@ public class ProfileActivity extends Fragment {
         newPassword.setVisibility(View.GONE);
         changePassword.setVisibility(View.GONE);
         remove.setVisibility(View.GONE);
+
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken == null) {
+            btnRemoveUser.setVisibility(View.VISIBLE);
+            Log.d(TAG, ">>>" + "Signed Out");
+        } else {
+            Log.d(TAG, ">>>" + "Signed In");
+            btnChangePassword.setVisibility(View.GONE);
+
+        }
+
+
 
         if (progressBar != null) {
             progressBar.setVisibility(View.GONE);
@@ -191,6 +207,11 @@ public class ProfileActivity extends Fragment {
             }
         });
         return view;
+    }
+
+    private void facebookPost() {
+        //check login
+
     }
 
     @SuppressLint("SetTextI18n")
