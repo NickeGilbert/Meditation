@@ -17,9 +17,9 @@ public class YogaDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yoga_detail);
 
-        mDetailImage = (ImageView)findViewById(R.id.yogaDetailImage);
-        mDetailTitle = (TextView)findViewById(R.id.yogaDetailTitle);
-        mDetailDesc = (TextView)findViewById(R.id.yogaDetailDesc);
+        mDetailImage = findViewById(R.id.yogaDetailImage);
+        mDetailTitle = findViewById(R.id.yogaDetailTitle);
+        mDetailDesc = findViewById(R.id.yogaDetailDesc);
 
         byte[] bytes = getIntent().getByteArrayExtra("image");
         String title = getIntent().getStringExtra("title");

@@ -31,7 +31,7 @@ import static android.support.constraint.Constraints.TAG;
 public class SignupActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword, inputUsername;
-    private Button btnSignIn, btnSignUp, btnResetPassword;
+    Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
 
@@ -44,16 +44,14 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         auth = FirebaseAuth.getInstance();
 
-        Log.d(TAG, "onCreate: " + userId);
-
-        btnSignIn = (Button) findViewById(R.id.sign_in_button);
-        btnSignUp = (Button) findViewById(R.id.sign_up_button);
-        inputEmail = (EditText) findViewById(R.id.email);
-        inputUsername = (EditText) findViewById(R.id.username);
-        inputPassword = (EditText) findViewById(R.id.password);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        btnSignIn = findViewById(R.id.sign_in_button);
+        btnSignUp = findViewById(R.id.sign_up_button);
+        inputEmail = findViewById(R.id.email);
+        inputUsername = findViewById(R.id.username);
+        inputPassword = findViewById(R.id.password);
+        progressBar = findViewById(R.id.progressBar);
         progressBar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressbar_spinner));
-        btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
+        btnResetPassword = findViewById(R.id.btn_reset_password);
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +67,7 @@ public class SignupActivity extends AppCompatActivity {
                 String password = inputPassword.getText().toString().trim();
                 String username = inputUsername.getText().toString().trim();
 
-                final User user = new User(email, "false", username, userId);
+                final User user = new User(email, "false", username);
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email adress!", Toast.LENGTH_SHORT).show();

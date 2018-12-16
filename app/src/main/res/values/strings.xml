@@ -127,5 +127,9 @@
     <string name="reset_timer">Reset Timer</string>
     <string name="timer">00:00:00</string>
 
+    //facebook login
+    <string name="facebook_app_id">2417878584893510</string>
+    <string name="fb_login_protocol_scheme">fb2417878584893510</string>
+
 
 </resources>

@@ -1,16 +1,18 @@
 package com.myprojects.nicklasgilbertsson.meditation;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -21,10 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.myprojects.nicklasgilbertsson.meditation.objects.CollectionRow;
 import com.myprojects.nicklasgilbertsson.meditation.view_holders.CollectionTitleViewHolder;
-
 import java.util.ArrayList;
-
-import static android.content.ContentValues.TAG;
 
 public class StartActivity extends Fragment {
 
@@ -32,9 +31,9 @@ public class StartActivity extends Fragment {
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
     RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    Button startMeditation, subscription;
 
-    private RecyclerView.LayoutManager layoutManager;
-    private Button startMeditation, subscription;
     final ArrayList<String> myCollectionTitleArray = new ArrayList<String>();
 
     @Override
@@ -53,20 +52,16 @@ public class StartActivity extends Fragment {
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("users-sound");
 
-
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    Log.e(TAG, "onDataChange"+postSnapshot.getKey());
                     myCollectionTitleArray.add(postSnapshot.getKey());
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
 
@@ -86,7 +81,6 @@ public class StartActivity extends Fragment {
                 Toast.makeText(getActivity(), "Currently unavailable. More amazing content will be added!", Toast.LENGTH_LONG).show();
             }
         });
-
         return view;
     }
 
@@ -97,18 +91,14 @@ public class StartActivity extends Fragment {
                 (CollectionRow.class, R.layout.button_row, CollectionTitleViewHolder.class, mRef) {
             @Override
             protected void populateViewHolder(final CollectionTitleViewHolder viewHolder, final CollectionRow model, int position) {
-
                 viewHolder.setTitle(myCollectionTitleArray.get(position));
-
                 viewHolder.setOnClickListener(new CollectionTitleViewHolder.ClickListener() {
                     @Override
                     public void onItemClick(View view, final int position) {
-
                         mRef.addValueEventListener(new ValueEventListener() {
 
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
                                 Intent intent = new Intent(getContext(), SoundActivity.class);
                                 intent.putExtra("collectionValue", myCollectionTitleArray.get(position));
                                 startActivity(intent);
@@ -116,7 +106,6 @@ public class StartActivity extends Fragment {
 
                             @Override
                             public void onCancelled(@NonNull DatabaseError databaseError) {
-
                             }
                         });
                     }
@@ -129,8 +118,6 @@ public class StartActivity extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
-        // Set title bar
         ((BottomNavigationActivity) getActivity())
                 .setActionBarTitle("Meditation");
     }

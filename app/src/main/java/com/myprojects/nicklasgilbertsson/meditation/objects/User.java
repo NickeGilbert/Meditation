@@ -4,13 +4,11 @@ public class User {
     public String email;
     public String subscription;
     public String username;
-    public String key;
 
-    public User(String email, String subscription, String username, String key) {
+    public User(String email, String subscription, String username) {
         this.email = email;
         this.subscription = subscription;
         this.username = username;
-        this.key = key;
     }
 
     public String getEmail() {
@@ -35,14 +33,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 
     public User() {

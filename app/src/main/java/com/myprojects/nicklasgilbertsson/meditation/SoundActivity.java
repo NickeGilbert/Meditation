@@ -52,14 +52,13 @@ public class SoundActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound);
         String collectionTitle = getIntent().getStringExtra("collectionValue");
-       // Log.d(TAG, "onCreate: " + collectionTitle);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("users-sound").child(collectionTitle);
         Log.d(TAG, "onCreate: " + mDatabase);
         mDatabase.keepSynced(true);
 
-        mSoundList = (RecyclerView)findViewById(R.id.myRecyclerview);
-        progressBar = (ProgressBar)findViewById(R.id.myProgressbar);
+        mSoundList = findViewById(R.id.myRecyclerview);
+        progressBar = findViewById(R.id.myProgressbar);
         progressBar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressbar_spinner));
         mSoundList.setHasFixedSize(true);
         mSoundList.setLayoutManager(new LinearLayoutManager(this));
@@ -91,10 +90,10 @@ public class SoundActivity extends AppCompatActivity {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 String audioFile = (String) dataSnapshot.child("song").getValue();
-                               // String audioTitle = mTitle;
+                                String audioTitle = mTitle;
 
                                 Intent intent = new Intent(getApplicationContext(), SoundDetailActivity.class);
-                               // intent.putExtra("title", audioTitle);
+                                intent.putExtra("title", audioTitle);
                                 intent.putExtra("song", audioFile);
                                 startActivity(intent);
                             }

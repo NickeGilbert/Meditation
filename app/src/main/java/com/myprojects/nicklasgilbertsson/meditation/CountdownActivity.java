@@ -20,7 +20,7 @@ public class CountdownActivity extends AppCompatActivity {
 
     private TextView countdownTimerText;
     private EditText minutes;
-    private Button startTimer, resetTimer;
+    Button startTimer, resetTimer;
     private static CountDownTimer countDownTimer;
 
     @Override
@@ -28,10 +28,10 @@ public class CountdownActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countdown);
 
-        countdownTimerText = (TextView) findViewById(R.id.countdownText);
-        minutes = (EditText) findViewById(R.id.enterMinutes);
-        startTimer = (Button) findViewById(R.id.startTimer);
-        resetTimer = (Button) findViewById(R.id.resetTimer);
+        countdownTimerText = findViewById(R.id.countdownText);
+        minutes = findViewById(R.id.enterMinutes);
+        startTimer = findViewById(R.id.startTimer);
+        resetTimer = findViewById(R.id.resetTimer);
 
         startTimer.setOnClickListener(new View.OnClickListener() {
             @Override

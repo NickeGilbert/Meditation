@@ -8,20 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class MiddleNavigation extends Fragment {
 
-    private Button mCountdownButton, mYogaButton;
+    Button mCountdownButton, mYogaButton;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_middle, container, false);
 
-        mCountdownButton = (Button)view.findViewById(R.id.countdown_button);
-        mYogaButton = (Button)view.findViewById(R.id.yoga_button);
+        mCountdownButton = view.findViewById(R.id.countdown_button);
+        mYogaButton = view.findViewById(R.id.yoga_button);
 
         mYogaButton.setOnClickListener(new View.OnClickListener() {
             @Override

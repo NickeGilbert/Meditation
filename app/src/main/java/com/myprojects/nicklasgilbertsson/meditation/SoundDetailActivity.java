@@ -1,29 +1,18 @@
 package com.myprojects.nicklasgilbertsson.meditation;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.io.IOException;
-
-import static android.app.Service.START_STICKY;
 
 public class SoundDetailActivity extends AppCompatActivity {
 
@@ -31,9 +20,9 @@ public class SoundDetailActivity extends AppCompatActivity {
      DatabaseReference mDatabase;
      private Button mButton;
      private MediaPlayer mMediaplayer;
-    private ProgressDialog progressDialog;
-    private boolean initialStage = true;
-    private boolean playPause;
+     private ProgressDialog progressDialog;
+     private boolean initialStage = true;
+     private boolean playPause;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +40,8 @@ public class SoundDetailActivity extends AppCompatActivity {
         String title = getIntent().getStringExtra("title");
         final String audioFile = getIntent().getStringExtra("song");
 
-        mButton = (Button) findViewById(R.id.myMusicBtn);
-        mDetailTitle = (TextView) findViewById(R.id.mySoundTitle);
+        mButton = findViewById(R.id.myMusicBtn);
+        mDetailTitle = findViewById(R.id.mySoundTitle);
         mDetailTitle.setText(title);
 
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -82,8 +71,6 @@ public class SoundDetailActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     class Player extends AsyncTask<String, Void, Boolean> {

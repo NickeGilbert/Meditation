@@ -24,22 +24,18 @@ import java.io.ByteArrayOutputStream;
 
 public class YogaActivity extends AppCompatActivity {
 
-    private static final String TAG = "YogaActivity";
-
     RecyclerView mRecyclerView;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
 
     private ProgressBar mProgressbar;
 
-    //This is the best one! https://www.youtube.com/watch?v=-ofYpirp4wA
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yoga);
 
-        mProgressbar = (ProgressBar)findViewById(R.id.yogaProgressbar);
+        mProgressbar = findViewById(R.id.yogaProgressbar);
         mProgressbar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressbar_spinner));
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
