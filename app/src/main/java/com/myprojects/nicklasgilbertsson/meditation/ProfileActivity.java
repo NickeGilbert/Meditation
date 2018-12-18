@@ -57,9 +57,6 @@ public class ProfileActivity extends Fragment {
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         setDataToView(user);
 
-        facebookPost();
-
-
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -85,17 +82,7 @@ public class ProfileActivity extends Fragment {
         changePassword.setVisibility(View.GONE);
         remove.setVisibility(View.GONE);
 
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        if (accessToken == null) {
-            btnRemoveUser.setVisibility(View.VISIBLE);
-            Log.d(TAG, ">>>" + "Signed Out");
-        } else {
-            Log.d(TAG, ">>>" + "Signed In");
-            btnChangePassword.setVisibility(View.GONE);
-
-        }
-
-
+        checkfacebookAccessToken();
 
         if (progressBar != null) {
             progressBar.setVisibility(View.GONE);
@@ -209,9 +196,13 @@ public class ProfileActivity extends Fragment {
         return view;
     }
 
-    private void facebookPost() {
-        //check login
-
+    private void checkfacebookAccessToken() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken == null) {
+            btnRemoveUser.setVisibility(View.VISIBLE);
+        } else {
+            btnChangePassword.setVisibility(View.GONE);
+        }
     }
 
     @SuppressLint("SetTextI18n")
